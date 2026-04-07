@@ -11,11 +11,13 @@ class Snake:
         self.head = self.segment[0]
     def create_snake(self):
         for position in self.starting_positions:
-            new_segment = Turtle(shape="square")
-            new_segment.color("white")
-            new_segment.penup()
-            new_segment.goto(position)
-            self.segment.append(new_segment)
+           self.add_segment(position)
+    def add_segment(self, position):
+        new_segment = Turtle(shape="square")
+        new_segment.color("white")
+        new_segment.penup()
+        new_segment.goto(position)
+        self.segment.append(new_segment)
     def move(self):
         for seg in range(len(self.segment) - 1, 0, -1):
             new_x = self.segment[seg - 1].xcor()
@@ -40,11 +42,5 @@ class Snake:
             self.head.setheading(LEFT)
         # self.move()
     def snake_grow(self):
-        new_segment = Turtle("square")
-        new_segment.penup()
-        new_segment.color("white")
-        # last_x = self.segment[-1].xcor()
-        # last_y = self.segment[-1].ycor()
-        # new_segment.goto(last_x, last_y)
-        self.segment.append(new_segment)
+        self.add_segment(self.segment[-1].position())
 
