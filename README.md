@@ -21,4 +21,4 @@ This is a Snake Game built with Python
 
 ## Screenshot
 
-![Snake Game Screenshot]<img src="https://github.com/user-attachments/assets/f43cfa73-5a8a-41cf-8d27-2546df461e85" width="400">
+<img src="https://github.com/user-attachments/assets/f43cfa73-5a8a-41cf-8d27-2546df461e85" width="400">
